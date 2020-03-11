@@ -1,0 +1,16 @@
+$tablet-width: 768px;
+$text-color: #000;
+
+$key-color: #f3dc6b;
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap');
+
+@mixin font-setting($size: 24, $base: 16) {
+  font-size: ($size / $base) * 1rem;
+}
+
+@import "load.scss";
+@import "base.scss";
+@import "top.scss";
