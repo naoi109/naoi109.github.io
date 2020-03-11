@@ -5,17 +5,21 @@
   width: calc(30vh + 5.5em);
   transform: rotate(90deg);
   margin-bottom: 3.5rem;
-  margin-right: -6.5rem;
+  margin-right: -7.5rem;
+  @media (min-width: $tablet-width + 1) {
+    width: calc(20vh + 5.5em);
+    margin-right: -5rem;
+  }
 }
 .scroll-line {
   width: 30vh;
   border-top: 1px solid $text-color;
   position: relative;
   top: -.25rem;
-  animation-name: scroll;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-  animation-iteration-count: infinite;
+  animation: scroll 1.5s cubic-bezier(.15,.41,.69,.94) infinite;
+  @media (min-width: $tablet-width + 1) {
+    width: 20vh;
+  }
 }
 @keyframes scroll {
   0% { width: 0vh }

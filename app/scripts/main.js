@@ -151,13 +151,13 @@ $(window).on('load', function() {
 })
 
 //smooth scroll
-document.addEventListener("click", e => {
+document.addEventListener('click', e => {
   const target = e.target;
-  if (!target.classList.contains("js-smooth-scroll")) return;
+  if (!target.classList.contains('js-smooth-scroll')) return;
   e.preventDefault();
   const targetId = target.hash;
   document.querySelector(targetId).scrollIntoView({
-    behavior: "smooth",
-    block: "start"
+    behavior: 'smooth',
+    block: 'start'
   });
 });
