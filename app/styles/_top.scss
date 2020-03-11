@@ -2,13 +2,13 @@
 .scroll {
   right: 0;
   bottom: 0;
-  width: calc(10vh + 5.5em);
+  width: calc(30vh + 5.5em);
   transform: rotate(90deg);
   margin-bottom: 3.5rem;
-  margin-right: -3rem;
+  margin-right: -6.5rem;
 }
 .scroll-line {
-  width: 10vh;
+  width: 30vh;
   border-top: 1px solid $text-color;
   position: relative;
   top: -.25rem;
@@ -22,9 +22,13 @@
   50% { width: 10vh; }
 }
 
+.top-scroll {
+  overflow-x: hidden;
+}
+
 //about
 .about-section {
-  background-color: #f3dc6b;
+  background-color: $key-color;
 }
 .key-visual {
   width: 100vw;
@@ -48,16 +52,15 @@
   height: 274px;
   margin-top: -137px;
   margin-left: -137px;
-  animation-name: spin;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
   transform: scale(1.5);
   @media (min-width: $tablet-width + 1) {
     width: 335px;
     height: 335px;
     margin-top: -167px;
     margin-left: -167px;
+  }
+  &.animated {
+    animation: spin 20s linear infinite;
   }
 }
 .round-logo,
@@ -89,7 +92,7 @@
   transform: rotate(90deg);
   left: 0;
   top: 0;
-  margin-left: -3rem;
+  margin-left: -3.5rem;
   margin-top: 3rem;
   @include font-setting(48);
   @media (min-width: $tablet-width + 1) {
@@ -181,7 +184,7 @@
 }
 .vision-lead {
   @include font-setting(16);
-  font-weight: 600;
+  font-weight: 700;
   @media (min-width: $tablet-width + 1) {
     @include font-setting(20);
   }
@@ -217,18 +220,5 @@
 .works-title {
   h1, h2 {
     line-height: 1.3;
-  }
-}
-
-.footer {
-  background-color: #dbee6f;
-  @include font-setting(12);
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-  @media (min-width: $tablet-width + 1) {
-    padding-top: 1rem;
-  }
-  .icon-footer {
-    width: 40px;
   }
 }

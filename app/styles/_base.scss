@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", HelveticaNeue, "Segoe UI", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Verdana, "メイリオ", Meiryo, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", HelveticaNeue, "Segoe UI", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Verdana, "メイリオ", Meiryo, sans-serif;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,6 +39,7 @@ a {
     position: absolute;
     transition: all .5s;
     bottom: -.25rem;
+    right: 0;
   }
   &:hover {
     &::after {
@@ -141,5 +142,21 @@ canvas{
     &::before {
       left: 0;
     }
+  }
+}
+
+.footer {
+  background-color: #dbed65;
+  @include font-setting(12);
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  @media (min-width: $tablet-width + 1) {
+    padding-top: 1rem;
+  }
+  small {
+    font-weight: 700;
+  }
+  .icon-footer {
+    width: 40px;
   }
 }
