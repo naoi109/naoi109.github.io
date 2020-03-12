@@ -5,9 +5,15 @@
   width: calc(30vh + 5.5em);
   transform: rotate(90deg);
   margin-bottom: 7.5rem;
-  margin-right: -7.5rem;
-  @media (min-width: $tablet-width + 1) {
+  margin-right: -7.25rem;
+  @media (max-width: $mindevice-width) {
+    margin-right: -6.5rem;
+  }
+  @media (min-width: $tablet-width) {
     width: calc(20vh + 5.5em);
+    margin-right: -7rem;
+  }
+  @media (min-width: $tablet-width + 1 ) {
     margin-bottom: 5rem;
     margin-right: -5rem;
   }
@@ -18,7 +24,7 @@
   position: relative;
   top: -.25rem;
   animation: scroll 1.5s cubic-bezier(.15,.41,.69,.94) infinite;
-  @media (min-width: $tablet-width + 1) {
+  @media (min-width: $tablet-width) {
     width: 20vh;
   }
 }
@@ -34,6 +40,8 @@
 //about
 .about-section {
   background-color: $key-color;
+  width: 100%;
+  overflow: hidden;
 }
 .key-visual {
   width: 100vw;
@@ -152,7 +160,7 @@
   @media (min-width: $tablet-width + 1) {
     @include font-setting(32);
   }
-  @media (max-width: 320px) {
+  @media (max-width: $mindevice-width) {
     @include font-setting(16);
   }
   .title-line {
@@ -167,7 +175,7 @@
       bottom: .5rem;
       left: 0;
       z-index: -1;
-      @media (max-width: 320px) {
+      @media (max-width: $mindevice-width) {
         bottom: .4rem;
       }
       @media (min-width: $tablet-width + 1) {
