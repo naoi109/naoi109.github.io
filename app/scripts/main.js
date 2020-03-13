@@ -28,7 +28,7 @@
         // Set the canvas size (Retina ready)
         canvas.width = document.documentElement.clientWidth;
         canvas.width *= devicePixelRatio;
-        canvas.height = canvas.width * .16;
+        canvas.height = canvas.width * .1;
         canvas.height *= devicePixelRatio;
         canvas.style.height = String(canvas.height / devicePixelRatio) + 'px';
 
