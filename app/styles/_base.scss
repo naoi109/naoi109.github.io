@@ -144,6 +144,27 @@ canvas{
     }
   }
 }
+.btn-primary {
+  background-color: #ffa053;
+  border-color: #ffa053;
+  color: #fff;
+  &:hover, &:active, &:focus,
+  &.hover, &.active, &.focus {
+    background-color: #f97000;
+    border-color: #f97000;
+  }
+}
+.btn-secondary {
+  background-color: #dbed65;
+  border-color: #dbed65;
+  color: #000;
+  &:hover, &:active, &:focus,
+  &.hover, &.active, &.focus {
+    background-color: #8ee92d;
+    border-color: #8ee92d;
+    color: #000;
+  }
+}
 
 .footer {
   background-color: #dbed65;

@@ -40,24 +40,27 @@
         </div>
       </div>
       <!-- class, action, methodを変更しないでください -->
-      <form class="formrun container container-text mt-5 mb-5" action="https://form.run/api/v1/r/qvvizbc9009uw4wec9vo3xci" method="post">
+      <form class="formrun container container-text mt-5 mb-5" action="https://form.run/api/v1/r/qvvizbc9009uw4wec9vo3xci" method="post" data-formrun-confirm="true">
         <h1 class="text-center">お問い合わせ</h1>
         <div class="form-group">
           <label class="mb-0">お名前<span class="ml-1 text-danger small">[必須]</span></label>
-          <input name="お名前" type="text" class="form-control" data-formrun-required>
-          <div data-formrun-show-if-error="お名前" class="text-muted small">お名前を入力してください</div>
+          <input name="お名前" type="text" class="form-control" data-formrun-required data-formrun-hide-if-confirm>
+          <div data-formrun-show-if-error="お名前" class="text-muted small" data-formrun-hide-if-confirm>お名前を入力してください</div>
+          <div data-formrun-show-if-confirm data-formrun-confirm-value="お名前"></div>
         </div>
 
         <div class="form-group">
           <label class="mb-0">メールアドレス<span class="ml-1 text-danger small">[必須]</span></label>
-          <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required class="form-control">
-          <div data-formrun-show-if-error="メールアドレス" class="text-muted small">メールアドレスを正しく入力してください</div>
+          <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required class="form-control" data-formrun-hide-if-confirm>
+          <div data-formrun-show-if-error="メールアドレス" class="text-muted small" data-formrun-hide-if-confirm>メールアドレスを正しく入力してください</div>
+          <div data-formrun-show-if-confirm data-formrun-confirm-value="メールアドレス"></div>
         </div>
 
         <div class="form-group">
           <label class="mb-0">お問い合わせ<span class="ml-1 text-danger small">[必須]</span></label>
-          <textarea name="お問い合わせ" data-formrun-required class="form-control" rows="6"></textarea>
-          <div data-formrun-show-if-error="お問い合わせ" class="text-muted small">お問い合わせを入力してください</div>
+          <textarea name="お問い合わせ" data-formrun-required class="form-control" rows="6" data-formrun-hide-if-confirm></textarea>
+          <div data-formrun-show-if-error="お問い合わせ" class="text-muted small" data-formrun-hide-if-confirm>お問い合わせを入力してください</div>
+          <div data-formrun-show-if-confirm data-formrun-confirm-value="お問い合わせ"></div>
         </div>
 
         <!-- ボット投稿をブロックするためのタグ -->
@@ -68,7 +71,8 @@
         </div>
 
         <div class="text-center mt-4">
-          <button type="submit" class="btn btn-primary rounded-pill pl-5 pr-5 font-weight-bold" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." class="">送信する</button>
+          <a href="javascript:void(0)" class="btn btn-secondary rounded-pill pl-5 pr-5 font-weight-bold" data-formrun-back-button>戻る</a>
+          <button type="submit" class="btn btn-primary rounded-pill pl-5 pr-5 font-weight-bold" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." class="">確認する</button>
         </div>
       </form>
 
