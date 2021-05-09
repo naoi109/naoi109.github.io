@@ -148,16 +148,16 @@ $(window).on('load', function() {
   $('#preloader').delay(350).fadeOut('slow');
   $('body').delay(350).removeClass('overflow-hidden');
   $('.round-logo, .round-overlay').delay(350).addClass('animated');
-})
+});
 
 //smooth scroll
-document.addEventListener('click', e => {
-  const target = e.target;
-  if (!target.classList.contains('js-smooth-scroll')) return;
-  e.preventDefault();
-  const targetId = target.hash;
-  document.querySelector(targetId).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+$(function(){
+  $('a[href^="#"]').click(function(){
+    let speed = 700;
+    let href= $(this).attr("href");
+    let target = $(href == "#" || href == "" ? 'html' : href);
+    let position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
   });
 });
