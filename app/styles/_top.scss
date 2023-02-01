@@ -84,7 +84,7 @@
   left: 50%;
   top: 50%;
   opacity: 0;
-  transition: 1s ease-in-out all;
+  -webkit-transform-style: flat;
   &.animated {
     transform: scale(1);
     opacity: 1;
@@ -92,8 +92,8 @@
 }
 
 @keyframes spin{
-  0%{transform:rotate(0deg);transform:rotate(0deg)}
-  to{-webkit-transform:rotate(-1turn);transform:rotate(-1turn)}
+  0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+  100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }
 
 .profile {
