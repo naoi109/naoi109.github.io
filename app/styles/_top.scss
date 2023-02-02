@@ -123,6 +123,12 @@
   @media (min-width: $tablet-width + 1) {
     padding-left: 6rem;
   }
+  a {
+    text-decoration: underline;
+    &:hover, &:active {
+      text-decoration: none;
+    }
+  }
 }
 .profile-title {
   text-align: right;
@@ -152,11 +158,8 @@
 }
 
 .vision {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  @media (min-width: $tablet-width + 1) {
-    padding-bottom: 4rem;
-  }
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 .vision-title {
   @include font-setting(20);
