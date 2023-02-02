@@ -218,3 +218,13 @@ if (isDev) {
 exports.serve = serve;
 exports.build = build;
 exports.default = build;
+
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
+
+var options = {branch: "master"};
+
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages(options));
+});
